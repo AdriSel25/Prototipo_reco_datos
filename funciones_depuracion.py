@@ -78,6 +78,48 @@ def creacion_query_uuids(lista_id_admin, lista_id_comercio, nombre_excel, lista_
     query_admin = (f' Select * From Where In {admin_tupla}')
     query_comercio = (f' Select * From Where In {comercio_tupla}')
 
-    #with open(ruta_completa, "w") as f: 
-    #Linea 85
+    with open(ruta_completa, "w") as f: 
+        #Abrir .sql
+        f.write(f'-- Script de consulta Ids \n')
+        #agregar scripts
+        f.write(query_admin + '\n\n' + query_comercio)
+        f.close()
 
+    with open(os.path.join(carpeta, "incompletos_query.txt"), "w") as txt_file:
+        txt_file.write("INCOMPLETOS PARA QUERY")
+        for line in lista_incompletos:
+            txt_file.write("\n" + str(line))
+
+def creacion_query_cedula(lista_ced, nombres_excel, acut):
+
+    carpeta = f'queries_depuracion_{nombres_excel}'
+    nombre_archivo = (f'BusquedaCedulas{acut}.sql')
+    ruta_completa = os.path.join(carpeta, nombre_archivo)
+
+    info_tupla =(lista_ced)
+
+    query_cedula = (f'SELECT * FROM WHERE IN {info_tupla}')
+
+    with open(ruta_completa, "w") as f:
+        #Abrir .sql
+        f.write(f'-- Script de consulta por cedula tipo {acut} \n')
+        f.write(query_cedula)
+        f.close()
+
+def regex_UUID(texto_uuid):
+    regex_result = re.search("^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$", str(texto_uuid))
+    print(bool(regex_result))
+    return regex_result
+
+def validar_empty(value):
+    value_not_empty = value != "None" and value != "#N/D" and value != "#N/A" and value != "0"
+    return value_not_empty
+
+def validar_tipo_clente(value):
+    print(value)
+    client_type = (value[0].upper())
+    print(client_type)
+    if (client_type == "C" or client_type == "E"):
+        return client_type
+    else:
+        return None
