@@ -116,4 +116,25 @@ for row in range(2, first_sheet.max_row +1):
         else:
             print("No tengo ni el admin ni al comercio, Por favor revisar el excel\n")
             datos_incompletos.append([row, nombre_comercio, comercio_id, admin_id])
-            
+
+    elif (valor_comercio_x is None and valor_admin_x == "X" and fd.regex_UUID(admin_id)):
+        if (valor_cantidad_CA == "SI"):
+            print(f"Datos Dila {row} \nVoy a buscar en el diccionario_admins para borrar el admin...")
+
+            if (admin_id in diccionario_admins):
+                print("Tengo el admin\n")
+                fd.procesar(admin_id, diccionario_admins, relaciones_procesadas, datos_depuracion)
+            else:
+                print("Este admn no esta en el diccionario_admin, por favor revisar Excel\n")
+                datos_incompletos.append([row, nombre_comercio, comercio_id, admin_id])
+
+        else:
+            print(f"Datos Fila {row} \nHay que borrar el admin! solo borrareos la relacion con el uuid de comercio y admin...")
+            print(f"Admin: {admin_id}. Longitud: {len(admin_id)}")
+            datos_depuracion.append([comercio_id, admin_id])
+
+    else:
+        print(f"Datos Dila {row} \nMe parece que me faltan indicacciones...Puede que las celdas esten vacios o los datos no cumplan con el formato requerido\n")
+        datos_incompletos.append([row, nombre_comercio, comercio_id, admin_id])
+
+fd.creacion_csv(datos_depuracion, nombre_archivo, datos_incompletos)
