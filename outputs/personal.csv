@@ -1,0 +1,3 @@
+name,email,national_id,client_type,company_name,alias,phone
+Juan Pérez , juan@example.com , 8-765-1234 , personal   ,       , jperez ,60001234
+Ana Ríos   , ana@gmail.com   , 4-123-567  , personal   ,       , anita  ,60007890
