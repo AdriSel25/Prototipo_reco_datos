@@ -1,0 +1,1 @@
+from YappySA.utils.data_utils import load_excel_normalized
