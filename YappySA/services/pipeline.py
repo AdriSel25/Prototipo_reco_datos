@@ -10,18 +10,14 @@ from YappySA.infra.reporting.exporter import export_failed_rows
 def run_import_pipeline(path: str) -> dict:
     df = load_excel_normalized(path)
 
-    # 1) errores "duros" (si los tuvieras)
     errors = validate_df(df)
     if errors:
         raise ValueError("Errores de validación:\n" + "\n".join(errors))
 
-    # 2) clasificar
     df["__class"] = df.apply(classify_row, axis=1)
 
-    # 3) preparar lista de fallos y filtrar duplicados del Excel (errores suaves)
     failed: list[dict] = []
 
-    # --- personales: duplicado de cédula (conserva la primera, omite las demás)
     p_mask = df["__class"].eq("PERSONAL")
     nid = df["national_id"].fillna("").astype(str).str.strip()
     p_valid = p_mask & nid.ne("")
@@ -41,7 +37,6 @@ def run_import_pipeline(path: str) -> dict:
             "alias": row.get("alias",""),
         })
 
-    # --- comerciales: RUC vacío (obligatorio)
     c_mask = df["__class"].eq("COMMERCIAL")
     ruc = df["ruc"].fillna("").astype(str).str.strip() if "ruc" in df.columns else pd.Series([""]*len(df))
     c_no_ruc = c_mask & ruc.eq("")
@@ -60,7 +55,6 @@ def run_import_pipeline(path: str) -> dict:
             "alias": row.get("alias",""),
         })
 
-    # --- comerciales: duplicado de RUC en el mismo archivo (conserva la primera)
     c_with_ruc = c_mask & ruc.ne("")
     c_dup_mask = ruc[c_with_ruc].duplicated(keep="first")
     for idx in ruc[c_with_ruc][c_dup_mask].index:
