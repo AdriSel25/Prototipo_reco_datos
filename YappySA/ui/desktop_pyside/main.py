@@ -1,4 +1,3 @@
-# YappySA/ui/desktop_pyside/main.py
 from __future__ import annotations
 import os, sys
 import pandas as pd
@@ -27,15 +26,14 @@ class MainWindow(QMainWindow):
         self._setup_ui()
         self._setup_statusbar()
 
-    # ======================================================
-    # 🎨 Paleta y tema visual
-    # ======================================================
+    # ------------------------------------------------------------------
+    # Tema general de la app
+    # ------------------------------------------------------------------
     def _apply_theme(self):
         app = QApplication.instance()
-        app.setStyle("Fusion")
+        app.setStyle("Fusion")  # fuerza estilo consistente en Win10/11
         palette = QPalette()
 
-        # Colores base
         celeste = QColor("#00aaff")
         naranja = QColor("#ff8c00")
         fondo = QColor("#f7f9fc")
@@ -52,13 +50,12 @@ class MainWindow(QMainWindow):
 
         app.setFont(QFont("Segoe UI", 9))
 
-        # Guardar colores para botones
         self.primary_color = celeste.name()
         self.accent_color = naranja.name()
 
-    # ======================================================
-    # 🧱 Construcción de interfaz
-    # ======================================================
+    # ------------------------------------------------------------------
+    # Construcción de la UI
+    # ------------------------------------------------------------------
     def _setup_ui(self):
         central = QWidget()
         self.setCentralWidget(central)
@@ -66,7 +63,7 @@ class MainWindow(QMainWindow):
         main_layout.setContentsMargins(15, 15, 15, 15)
         main_layout.setSpacing(12)
 
-        # ---------- Encabezado con logo y título ----------
+        # ----- Encabezado con logo y título -----
         header = QHBoxLayout()
         logo_path = Path(__file__).resolve().parents[2] / "resources" / "logo_empresa.png"
         logo_label = QLabel()
@@ -82,13 +79,16 @@ class MainWindow(QMainWindow):
         header.addStretch()
         main_layout.addLayout(header)
 
-        # Línea decorativa naranja bajo el encabezado
+        # Línea separadora
         line = QFrame()
         line.setFrameShape(QFrame.HLine)
-        line.setStyleSheet(f"color: {self.accent_color}; background-color: {self.accent_color}; height: 3px;")
+        line.setStyleSheet(
+            f"color: {self.accent_color}; "
+            f"background-color: {self.accent_color}; height: 3px;"
+        )
         main_layout.addWidget(line)
 
-        # ---------- Barra de botones ----------
+        # ----- Barra de botones -----
         button_bar = QHBoxLayout()
         button_bar.setSpacing(10)
 
@@ -132,43 +132,69 @@ class MainWindow(QMainWindow):
 
         main_layout.addLayout(button_bar)
 
-        # ---------- Tabla ----------
+        # ----- Tabla principal -----
         self.table = QTableView()
         self.model = PandasModel(pd.DataFrame())
         self.table.setModel(self.model)
+
+        # Colores consistentes en todas las plataformas
         self.table.setAlternatingRowColors(True)
         self.table.setStyleSheet(f"""
+            QTableView {{
+                background-color: #ffffff;
+                color: #000000;
+                gridline-color: #dddddd;
+                selection-background-color: {self.accent_color};
+                selection-color: #ffffff;
+                alternate-background-color: #f5f5f5;
+            }}
+
             QHeaderView::section {{
                 background-color: {self.accent_color};
-                color: white;
+                color: #ffffff;
                 font-weight: bold;
                 padding: 4px;
             }}
+
+            QTableView::item {{
+                background-color: transparent;
+                color: #000000;
+            }}
+
+            QTableView::item:selected {{
+                background-color: {self.accent_color};
+                color: #ffffff;
+            }}
         """)
+
         main_layout.addWidget(self.table, 1)
 
-    # ======================================================
-    # 🔧 Status bar y helpers
-    # ======================================================
+    # ------------------------------------------------------------------
+    # Status bar
+    # ------------------------------------------------------------------
     def _setup_statusbar(self):
         status = QStatusBar()
         status.showMessage("Listo.")
         self.setStatusBar(status)
         self.status = status
 
+    # ------------------------------------------------------------------
+    # Utilidades internas
+    # ------------------------------------------------------------------
     def _darken(self, color_hex: str, factor: float) -> str:
-        """Oscurece un color hex."""
         c = QColor(color_hex)
         r = max(0, int(c.red() * factor))
         g = max(0, int(c.green() * factor))
         b = max(0, int(c.blue() * factor))
         return QColor(r, g, b).name()
 
-    # ======================================================
-    # ⚙️ Funcionalidad existente
-    # ======================================================
+    # ------------------------------------------------------------------
+    # Slots / acciones
+    # ------------------------------------------------------------------
     def open_file(self):
-        path, _ = QFileDialog.getOpenFileName(self, "Seleccionar Excel", "", "Excel (*.xlsx *.xls)")
+        path, _ = QFileDialog.getOpenFileName(
+            self, "Seleccionar Excel", "", "Excel (*.xlsx *.xls)"
+        )
         if path:
             self.current_path = path
             self.status.showMessage(f"Archivo seleccionado: {path}")
@@ -186,9 +212,11 @@ class MainWindow(QMainWindow):
         finally:
             QApplication.restoreOverrideCursor()
 
-        msg = (f"Total filas: {s.get('total', 0)}\n"
-               f"Insertadas: {s.get('inserted', 0)}\n"
-               f"Omitidas: {s.get('skipped', 0)}")
+        msg = (
+            f"Total filas: {s.get('total', 0)}\n"
+            f"Insertadas: {s.get('inserted', 0)}\n"
+            f"Omitidas: {s.get('skipped', 0)}"
+        )
         failed_csv = s.get("failed_csv")
         if failed_csv:
             msg += f"\n\nSe creó un CSV con los errores:\n{failed_csv}"
@@ -213,9 +241,13 @@ class MainWindow(QMainWindow):
 
     def print_view(self):
         if self.model.rowCount() == 0:
-            QMessageBox.information(self, "Sin datos", "No hay datos en la tabla para imprimir.")
+            QMessageBox.information(
+                self, "Sin datos", "No hay datos en la tabla para imprimir."
+            )
             return
-        path, _ = QFileDialog.getSaveFileName(self, "Guardar PDF", "consulta.pdf", "PDF (*.pdf)")
+        path, _ = QFileDialog.getSaveFileName(
+            self, "Guardar PDF", "consulta.pdf", "PDF (*.pdf)"
+        )
         if not path:
             return
         try:
@@ -228,14 +260,13 @@ class MainWindow(QMainWindow):
             QApplication.restoreOverrideCursor()
         QMessageBox.information(self, "PDF generado", f"Archivo guardado: {path}")
 
-# ======================================================
-# 🏁 Entry point
-# ======================================================
+
 def main():
     app = QApplication(sys.argv)
     w = MainWindow()
     w.show()
     sys.exit(app.exec())
+
 
 if __name__ == "__main__":
     main()

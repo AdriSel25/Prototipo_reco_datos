@@ -42,6 +42,9 @@ class QueryExportDialog(QDialog):
         self.resize(900, 600)
         self._build_ui()
 
+    # ------------------------------------------------------------------
+    # Construcción de la interfaz
+    # ------------------------------------------------------------------
     def _build_ui(self):
         v = QVBoxLayout(self)
 
@@ -70,7 +73,7 @@ class QueryExportDialog(QDialog):
         grid.addWidget(self.date_from, row, 1)
         row += 1
 
-        # Campos de filtro (ahora aceptan múltiples valores)
+        # Campos de filtro (aceptan múltiples valores)
         self.le_uuid = QLineEdit()
         self.le_uuid.setPlaceholderText(
             "UUID(s) exactos: uno o varios separados por coma, ; o salto de línea"
@@ -78,7 +81,7 @@ class QueryExportDialog(QDialog):
 
         self.le_nid = QLineEdit()
         self.le_nid.setPlaceholderText(
-            "Cédula(s) (national_id) – uno o varios"
+            "Cédula(s) (national_id) – una o varias"
         )
 
         self.le_ruc = QLineEdit()
@@ -126,9 +129,43 @@ class QueryExportDialog(QDialog):
         self.table = QTableView()
         self.model = PandasModel(pd.DataFrame())
         self.table.setModel(self.model)
+
+        # Estilo de tabla consistente con la ventana principal
+        accent_color = "#ff8c00"
+        self.table.setAlternatingRowColors(True)
+        self.table.setStyleSheet(f"""
+            QTableView {{
+                background-color: #ffffff;
+                color: #000000;
+                gridline-color: #dddddd;
+                selection-background-color: {accent_color};
+                selection-color: #ffffff;
+                alternate-background-color: #f5f5f5;
+            }}
+
+            QHeaderView::section {{
+                background-color: {accent_color};
+                color: #ffffff;
+                font-weight: bold;
+                padding: 4px;
+            }}
+
+            QTableView::item {{
+                background-color: transparent;
+                color: #000000;
+            }}
+
+            QTableView::item:selected {{
+                background-color: {accent_color};
+                color: #ffffff;
+            }}
+        """)
+
         v.addWidget(self.table, 1)
 
-    # --------- Helpers ---------
+    # ------------------------------------------------------------------
+    # Helpers internos
+    # ------------------------------------------------------------------
     def _gather(self):
         # Tipos
         kinds = []
@@ -155,6 +192,7 @@ class QueryExportDialog(QDialog):
         if not kinds:
             raise ValueError("Selecciona al menos un tipo de cliente.")
 
+        # Pasamos listas (o None) a query_clients_filtered
         return query_clients_filtered(
             kinds=kinds,
             since_date=since,
@@ -164,7 +202,9 @@ class QueryExportDialog(QDialog):
             limit=limit,
         )
 
-    # --------- Slots ---------
+    # ------------------------------------------------------------------
+    # Slots
+    # ------------------------------------------------------------------
     def on_preview(self):
         try:
             df = self._do_query(limit=200)
@@ -189,7 +229,9 @@ class QueryExportDialog(QDialog):
 
             default = "consulta.csv" if self.rb_csv.isChecked() else "consulta.xlsx"
             filt = "CSV (*.csv)" if self.rb_csv.isChecked() else "Excel (*.xlsx)"
-            path, _ = QFileDialog.getSaveFileName(self, "Guardar archivo", default, filt)
+            path, _ = QFileDialog.getSaveFileName(
+                self, "Guardar archivo", default, filt
+            )
             if not path:
                 return
 
