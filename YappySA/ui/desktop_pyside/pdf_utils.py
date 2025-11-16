@@ -88,6 +88,7 @@ def _col_widths(headers: List[str]) -> List[int]:
     return [max(6, round(w * 100 / total)) for w in weights]
 
 def _style() -> str:
+    # Body texto oscuro, encabezados con texto blanco
     return f"""
 <style>
   html, body {{ margin:0; padding:0; }}
@@ -96,7 +97,15 @@ def _style() -> str:
 
   table {{ border-collapse: collapse; width: 100%; table-layout: fixed; }}
   th, td {{ border:1px solid #ddd; padding:4px 6px; vertical-align:middle; }}
-  th {{ background:#00aaff; color:#fff; text-align:left; font-weight:600; }}
+
+  /* Encabezados: fondo celeste, texto blanco para TODAS las columnas */
+  th {{
+    background:#00aaff;
+    color:#ffffff;
+    text-align:left;
+    font-weight:600;
+  }}
+
   tr:nth-child(even) td {{ background:#fafafa; }}
   td {{ white-space:normal; word-break:break-word; overflow-wrap:anywhere; hyphens:auto; }}
 
@@ -105,8 +114,14 @@ def _style() -> str:
 """
 
 def _make_table(headers: List[str], widths: List[int], rows_html: List[str]) -> str:
-    colgroup = "<colgroup>" + "".join(f'<col style="width:{w}%"/>' for w in widths) + "</colgroup>"
-    thead = "<thead><tr>" + "".join(f"<th>{html_escape(h)}</th>" for h in headers) + "</tr></thead>"
+    colgroup = "<colgroup>" + "".join(
+        f'<col style="width:{w}%"/>' for w in widths
+    ) + "</colgroup>"
+
+    # Todos los encabezados usan el mismo estilo (texto blanco)
+    th_cells = [f"<th>{html_escape(h)}</th>" for h in headers]
+
+    thead = "<thead><tr>" + "".join(th_cells) + "</tr></thead>"
     tbody = "<tbody>" + "".join(rows_html) + "</tbody>"
     return f"<table>{colgroup}{thead}{tbody}</table>"
 
