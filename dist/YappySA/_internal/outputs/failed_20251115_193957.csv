@@ -1,0 +1,151 @@
+row_number_excel,reason,client_type,name,national_id,ruc,company_name,email,phone,alias
+20,Duplicado en archivo (cédula),PERSONAL,Samuel Vega,2-5889-1001,,,samuel.vega13@empresa.com,+507 368-7209,samuelveg13
+29,Duplicado en archivo (cédula),PERSONAL,Andrés Castro,2-2403-1002,,,andrés.castro17@yappy-test.pa,+507 668-6180,andréscas17
+60,Duplicado en archivo (cédula),PERSONAL,Samuel Mendoza,3-8787-1003,,,samuel.mendoza37@example.com,+507 844-4185,samuelmen37
+40,Duplicado en archivo (RUC),COMMERCIAL,Mercantil del Este - Contacto,,68-1009-2002,Mercantil del Este,ventas17@mercantil.com,+507 640-3088,mercantil17
+91,Duplicado en archivo (RUC),COMMERCIAL,Soluciones del Istmo - Contacto,,26-3504-2001,Soluciones del Istmo,ventas35@soluciones.com,+507 530-5022,soluciones35
+2,❌ RUC duplicado: nan,PERSONAL,Lucía Reyes,2-5889-1001,nan,nan,lucía.reyes1,+507 854-9317,lucíarey1
+3,❌ RUC duplicado: 26-3504-2001,COMMERCIAL,Alimentos del Norte S.A. - Contacto,nan,26-3504-2001,Alimentos del Norte S.A.,ventas1@alimentos.com,+507 582-3646,alimentos1
+4,❌ RUC duplicado: 68-1009-2002,COMMERCIAL,Energía & Más S.A. - Contacto,nan,68-1009-2002,Energía & Más S.A.,ventas2,+507 813-6310,energía2
+5,❌ RUC duplicado: 3-2832-2003,COMMERCIAL,Soluciones del Istmo - Contacto,nan,3-2832-2003,Soluciones del Istmo,ventas3@soluciones.com,+507 571-6038,soluciones3
+6,❌ RUC duplicado: nan,PERSONAL,Andrés Rodríguez,2-2403-1002,nan,nan,andrés.rodríguez2@empresa.com,+507 949-8962,andrésrod2
+7,❌ RUC duplicado: nan,PERSONAL,María Navarro,3-8787-1003,nan,nan,maría.navarro3@empresa.com,+507 762-3705,nan
+8,❌ RUC duplicado: 68-7932-2004,COMMERCIAL,InnovaLogistics S.A. - Contacto,nan,68-7932-2004,InnovaLogistics S.A.,ventas4@innovalogistics.com,+507 416-9835,innovalogistics4
+9,❌ RUC duplicado: nan,PERSONAL,Paola Fernández,6-8177-1004,nan,nan,paola.fernández4@yappy-test.pa,+507 729-8397,paolafer4
+10,❌ RUC duplicado: nan,PERSONAL,Carlos Sánchez,2-6539-1005,nan,nan,carlos.sánchez5@empresa.com,+507 221-4770,carlossán5
+11,❌ RUC duplicado: nan,PERSONAL,Diana Sánchez,2-1964-1006,nan,nan,diana.sánchez6@example.com,+507 434-2104,dianasán6
+12,❌ RUC duplicado: nan,PERSONAL,Luis Vásquez,4-5562-1007,nan,nan,luis.vásquez7@example.com,+507 885-8953,luisvás7
+13,❌ RUC duplicado: nan,PERSONAL,Paola Navarro,8-4981-1008,nan,nan,paola.navarro8@empresa.com,+507 684-7669,paolanav8
+14,❌ RUC duplicado: nan,PERSONAL,Paola García,7-6804-1009,nan,nan,paola.garcía9@example.com,+507 633-7735,paolagar9
+15,❌ RUC duplicado: 94-1887-2005,COMMERCIAL,Soluciones del Istmo - Contacto,nan,94-1887-2005,Soluciones del Istmo,ventas5@soluciones.com,+507 889-2612,soluciones5
+16,❌ RUC duplicado: nan,PERSONAL,Luis Morales,2-5073-1010,nan,nan,luis.morales10@negocio.com,+507 396-4116,luismor10
+17,❌ RUC duplicado: nan,PERSONAL,Javier Torres,7-4006-1011,nan,nan,javier.torres11@empresa.com,+507 485-8579,javiertor11
+18,❌ RUC duplicado: 10-8260-2006,COMMERCIAL,Distribuidora del Pacífico - Contacto,nan,10-8260-2006,Distribuidora del Pacífico,ventas6@distribuidora.com,+507 763-2604,distribuidora6
+19,❌ RUC duplicado: nan,PERSONAL,Luis Navarro,2-4872-1012,nan,nan,luis.navarro12@example.com,+507 370-7658,luisnav12
+21,❌ RUC duplicado: nan,PERSONAL,Ana Morales,8-5673-1014,nan,nan,ana.morales14@negocio.com,+507 633-8973,anamor14
+22,❌ RUC duplicado: 25-5861-2007,COMMERCIAL,Servicios Globales Corp. - Contacto,nan,25-5861-2007,Servicios Globales Corp.,ventas7@servicios.com,+507 422-1958,servicios7
+23,❌ RUC duplicado: 95-9883-2008,COMMERCIAL,Alimentos del Norte S.A. - Contacto,nan,95-9883-2008,Alimentos del Norte S.A.,ventas8@alimentos.com,+507 262-6138,alimentos8
+24,❌ RUC duplicado: nan,PERSONAL,Luis Rodríguez,8-9238-1015,nan,nan,luis.rodríguez15@corp.test,+507 743-3579,luisrod15
+25,❌ RUC duplicado: 66-2312-2009,COMMERCIAL,TecnoPlus S.A. - Contacto,nan,66-2312-2009,TecnoPlus S.A.,ventas9@tecnoplus.com,+507 390-2122,tecnoplus9
+26,❌ RUC duplicado: 9-4853-2010,COMMERCIAL,Alimentos del Norte S.A. - Contacto,nan,9-4853-2010,Alimentos del Norte S.A.,ventas10@alimentos.com,+507 613-2964,alimentos10
+27,❌ RUC duplicado: 32-1651-2011,COMMERCIAL,Alimentos del Norte S.A. - Contacto,nan,32-1651-2011,Alimentos del Norte S.A.,ventas11@alimentos.com,+507 834-2343,alimentos11
+28,❌ RUC duplicado: nan,PERSONAL,Raúl Romero,6-5272-1016,nan,nan,raúl.romero16@corp.test,+507 409-6147,raúlrom16
+30,❌ RUC duplicado: 2-8508-2012,COMMERCIAL,Comercial Panamá S.A. - Contacto,nan,2-8508-2012,Comercial Panamá S.A.,ventas12@comercial.com,+507 836-2638,comercial12
+31,❌ RUC duplicado: nan,PERSONAL,María Navarro,5-3170-1018,nan,nan,maría.navarro18@empresa.com,+507 557-2127,maríanav18
+32,❌ RUC duplicado: nan,PERSONAL,Andrés Hernández,3-8179-1019,nan,nan,andrés.hernández19@negocio.com,+507 756-5956,andrésher19
+33,❌ RUC duplicado: nan,PERSONAL,Tomás Reyes,5-2697-1020,nan,nan,tomás.reyes20@example.com,+507 337-5333,tomásrey20
+34,❌ RUC duplicado: nan,PERSONAL,Carlos García,3-5462-1021,nan,nan,carlos.garcía21@corp.test,+507 488-4450,carlosgar21
+35,❌ RUC duplicado: 27-5325-2013,COMMERCIAL,Mercantil del Este - Contacto,nan,27-5325-2013,Mercantil del Este,ventas13@mercantil.com,+507 717-9004,mercantil13
+36,❌ RUC duplicado: 7-2512-2014,COMMERCIAL,InnovaLogistics S.A. - Contacto,nan,7-2512-2014,InnovaLogistics S.A.,ventas14@innovalogistics.com,+507 849-7939,innovalogistics14
+37,❌ RUC duplicado: 6-1058-2015,COMMERCIAL,InnovaLogistics S.A. - Contacto,nan,6-1058-2015,InnovaLogistics S.A.,ventas15@innovalogistics.com,+507 541-3143,innovalogistics15
+38,❌ RUC duplicado: 21-8239-2016,COMMERCIAL,InnovaLogistics S.A. - Contacto,nan,21-8239-2016,InnovaLogistics S.A.,ventas16@innovalogistics.com,+507 764-8007,innovalogistics16
+39,❌ RUC duplicado: nan,PERSONAL,Javier González,2-3442-1022,nan,nan,javier.gonzález22@example.com,+507 758-1590,javiergon22
+41,❌ RUC duplicado: nan,PERSONAL,Luis Fernández,1-6862-1023,nan,nan,luis.fernández23@negocio.com,+507 415-5088,luisfer23
+42,❌ RUC duplicado: nan,PERSONAL,Carlos Hernández,7-3532-1024,nan,nan,carlos.hernández24@corp.test,+507 442-3662,carlosher24
+43,❌ RUC duplicado: 53-1406-2018,COMMERCIAL,Servicios Globales Corp. - Contacto,nan,53-1406-2018,Servicios Globales Corp.,ventas18@servicios.com,+507 383-6442,servicios18
+44,❌ RUC duplicado: nan,PERSONAL,Raúl Sánchez,3-2771-1025,nan,nan,raúl.sánchez25@negocio.com,+507 591-1634,raúlsán25
+45,❌ RUC duplicado: nan,PERSONAL,Samuel Sánchez,8-6728-1026,nan,nan,samuel.sánchez26@empresa.com,+507 512-4728,samuelsán26
+46,❌ RUC duplicado: 4-4164-2019,COMMERCIAL,Distribuidora del Pacífico - Contacto,nan,4-4164-2019,Distribuidora del Pacífico,ventas19@distribuidora.com,+507 608-6378,distribuidora19
+47,❌ RUC duplicado: nan,PERSONAL,Lucía Pérez,6-9346-1027,nan,nan,lucía.pérez27@negocio.com,+507 609-9785,lucíapér27
+48,❌ RUC duplicado: nan,PERSONAL,Elena González,5-3925-1028,nan,nan,elena.gonzález28@example.com,+507 794-5349,elenagon28
+49,❌ RUC duplicado: 14-8119-2020,COMMERCIAL,TecnoPlus S.A. - Contacto,nan,14-8119-2020,TecnoPlus S.A.,ventas20@tecnoplus.com,+507 553-6139,tecnoplus20
+50,❌ RUC duplicado: nan,PERSONAL,Raúl Mendoza,2-7311-1029,nan,nan,raúl.mendoza29@corp.test,+507 790-4114,raúlmen29
+51,❌ RUC duplicado: nan,PERSONAL,Lucía Rodríguez,1-9518-1030,nan,nan,lucía.rodríguez30@yappy-test.pa,+507 751-4228,lucíarod30
+52,❌ RUC duplicado: 56-2146-2021,COMMERCIAL,Mercantil del Este - Contacto,nan,56-2146-2021,Mercantil del Este,ventas21@mercantil.com,+507 880-6409,mercantil21
+53,❌ RUC duplicado: nan,PERSONAL,Tomás Vásquez,5-9308-1031,nan,nan,tomás.vásquez31@example.com,+507 516-7691,tomásvás31
+54,❌ RUC duplicado: nan,PERSONAL,Elena Morales,3-4143-1032,nan,nan,elena.morales32@negocio.com,+507 630-7211,elenamor32
+55,❌ RUC duplicado: nan,PERSONAL,Jorge Mendoza,5-7653-1033,nan,nan,jorge.mendoza33@corp.test,+507 761-1006,jorgemen33
+56,❌ RUC duplicado: 37-4443-2022,COMMERCIAL,InnovaLogistics S.A. - Contacto,nan,37-4443-2022,InnovaLogistics S.A.,ventas22@innovalogistics.com,+507 640-6279,innovalogistics22
+57,❌ RUC duplicado: nan,PERSONAL,Valeria Torres,4-9375-1034,nan,nan,valeria.torres34@yappy-test.pa,+507 684-3780,valeriator34
+58,❌ RUC duplicado: nan,PERSONAL,María Fernández,6-2530-1035,nan,nan,maría.fernández35@corp.test,+507 969-4848,maríafer35
+59,❌ RUC duplicado: nan,PERSONAL,Ricardo Sánchez,3-1400-1036,nan,nan,ricardo.sánchez36@empresa.com,+507 247-5011,ricardosán36
+61,❌ RUC duplicado: nan,PERSONAL,Camila Vega,4-3417-1038,nan,nan,camila.vega38@yappy-test.pa,+507 871-1090,camilaveg38
+62,❌ RUC duplicado: nan,PERSONAL,Carlos Ramos,3-9486-1039,nan,nan,carlos.ramos39@empresa.com,+507 675-1822,carlosram39
+63,❌ RUC duplicado: nan,PERSONAL,Javier Sánchez,8-3184-1040,nan,nan,javier.sánchez40@example.com,+507 675-9702,javiersán40
+64,❌ RUC duplicado: nan,PERSONAL,Javier Mendoza,8-9270-1041,nan,nan,javier.mendoza41@negocio.com,+507 636-9976,javiermen41
+65,❌ RUC duplicado: 21-8777-2023,COMMERCIAL,Soluciones del Istmo - Contacto,nan,21-8777-2023,Soluciones del Istmo,ventas23@soluciones.com,+507 660-5246,soluciones23
+66,❌ RUC duplicado: nan,PERSONAL,Andrés Castro,8-4919-1042,nan,nan,andrés.castro42@corp.test,+507 481-8206,andréscas42
+67,❌ RUC duplicado: 92-5681-2024,COMMERCIAL,Comercial Panamá S.A. - Contacto,nan,92-5681-2024,Comercial Panamá S.A.,ventas24@comercial.com,+507 440-5451,comercial24
+68,❌ RUC duplicado: nan,PERSONAL,Elena Vásquez,2-3267-1043,nan,nan,elena.vásquez43@corp.test,+507 354-4788,elenavás43
+69,❌ RUC duplicado: nan,PERSONAL,Camila Martínez,2-7797-1044,nan,nan,camila.martínez44@empresa.com,+507 617-6421,camilamar44
+70,❌ RUC duplicado: 60-7812-2025,COMMERCIAL,Energía & Más S.A. - Contacto,nan,60-7812-2025,Energía & Más S.A.,ventas25@energía.com,+507 263-4388,energía25
+71,❌ RUC duplicado: nan,PERSONAL,Raúl Morales,1-7232-1045,nan,nan,raúl.morales45@corp.test,+507 688-1096,raúlmor45
+72,❌ RUC duplicado: nan,PERSONAL,Diego Fernández,7-9818-1046,nan,nan,diego.fernández46@yappy-test.pa,+507 965-9947,diegofer46
+73,❌ RUC duplicado: 29-8999-2026,COMMERCIAL,Alimentos del Norte S.A. - Contacto,nan,29-8999-2026,Alimentos del Norte S.A.,ventas26@alimentos.com,+507 424-5471,alimentos26
+74,❌ RUC duplicado: nan,PERSONAL,Raúl Vega,7-6507-1047,nan,nan,raúl.vega47@example.com,+507 884-7624,raúlveg47
+75,❌ RUC duplicado: nan,PERSONAL,Jorge Torres,1-7455-1048,nan,nan,jorge.torres48@empresa.com,+507 806-1444,jorgetor48
+76,❌ RUC duplicado: nan,PERSONAL,María Ramos,8-3977-1049,nan,nan,maría.ramos49@empresa.com,+507 251-5262,maríaram49
+77,❌ RUC duplicado: 42-4467-2027,COMMERCIAL,Grupo Andino S.A. - Contacto,nan,42-4467-2027,Grupo Andino S.A.,ventas27@grupo.com,+507 665-6355,grupo27
+78,❌ RUC duplicado: 98-7211-2028,COMMERCIAL,Mercantil del Este - Contacto,nan,98-7211-2028,Mercantil del Este,ventas28@mercantil.com,+507 484-7906,mercantil28
+79,❌ RUC duplicado: nan,PERSONAL,Lucía Pérez,1-9837-1050,nan,nan,lucía.pérez50@yappy-test.pa,+507 253-6733,lucíapér50
+80,❌ RUC duplicado: 84-2124-2029,COMMERCIAL,Distribuidora del Pacífico - Contacto,nan,84-2124-2029,Distribuidora del Pacífico,ventas29@distribuidora.com,+507 999-1659,distribuidora29
+81,❌ RUC duplicado: nan,PERSONAL,Ana Sánchez,1-3496-1051,nan,nan,ana.sánchez51@empresa.com,+507 444-3068,anasán51
+82,❌ RUC duplicado: 86-2874-2030,COMMERCIAL,Soluciones del Istmo - Contacto,nan,86-2874-2030,Soluciones del Istmo,ventas30@soluciones.com,+507 777-4571,soluciones30
+83,❌ RUC duplicado: 90-5198-2031,COMMERCIAL,Soluciones del Istmo - Contacto,nan,90-5198-2031,Soluciones del Istmo,ventas31@soluciones.com,+507 985-7043,soluciones31
+84,❌ RUC duplicado: 78-2876-2032,COMMERCIAL,Servicios Globales Corp. - Contacto,nan,78-2876-2032,Servicios Globales Corp.,ventas32@servicios.com,+507 996-3683,nan
+85,❌ RUC duplicado: 14-1420-2033,COMMERCIAL,InnovaLogistics S.A. - Contacto,nan,14-1420-2033,InnovaLogistics S.A.,ventas33@innovalogistics.com,+507 519-7149,innovalogistics33
+86,❌ RUC duplicado: nan,PERSONAL,Camila Díaz,4-2669-1052,nan,nan,camila.díaz52@example.com,+507 913-5941,camiladía52
+87,❌ RUC duplicado: nan,PERSONAL,Tomás García,1-6688-1053,nan,nan,tomás.garcía53@corp.test,+507 745-8018,tomásgar53
+88,❌ RUC duplicado: 9-9289-2034,COMMERCIAL,Mercantil del Este - Contacto,nan,9-9289-2034,Mercantil del Este,ventas34@mercantil.com,+507 863-6590,mercantil34
+89,❌ RUC duplicado: nan,PERSONAL,Ana Ramos,2-8102-1054,nan,nan,ana.ramos54@yappy-test.pa,+507 570-8532,anaram54
+90,❌ RUC duplicado: nan,PERSONAL,Sofía Ramos,5-9817-1055,nan,nan,sofía.ramos55@empresa.com,+507 993-8921,sofíaram55
+92,❌ RUC duplicado: 36-8385-2036,COMMERCIAL,Comercial Panamá S.A. - Contacto,nan,36-8385-2036,Comercial Panamá S.A.,ventas36@comercial.com,+507 449-8613,comercial36
+93,❌ RUC duplicado: nan,PERSONAL,Diana Mendoza,6-1470-1056,nan,nan,diana.mendoza56@yappy-test.pa,+507 706-6325,dianamen56
+94,❌ RUC duplicado: nan,PERSONAL,Jorge Vega,6-5232-1057,nan,nan,jorge.vega57@empresa.com,+507 548-5581,jorgeveg57
+95,❌ RUC duplicado: nan,PERSONAL,Tomás Castro,1-9464-1058,nan,nan,tomás.castro58@corp.test,+507 395-2402,nan
+96,❌ RUC duplicado: nan,PERSONAL,Andrés Ramos,4-8800-1059,nan,nan,andrés.ramos59@yappy-test.pa,+507 861-9041,andrésram59
+97,❌ RUC duplicado: nan,PERSONAL,Valeria González,5-4630-1060,nan,nan,valeria.gonzález60@example.com,+507 614-4986,valeriagon60
+98,❌ RUC duplicado: nan,PERSONAL,Ricardo Romero,8-9698-1061,nan,nan,ricardo.romero61@negocio.com,+507 552-7971,ricardorom61
+99,❌ RUC duplicado: nan,PERSONAL,Javier Vásquez,8-5438-1062,nan,nan,javier.vásquez62@negocio.com,+507 513-5118,javiervás62
+100,❌ RUC duplicado: 16-4155-2037,COMMERCIAL,Distribuidora del Pacífico - Contacto,nan,16-4155-2037,Distribuidora del Pacífico,ventas37@distribuidora.com,+507 523-2958,distribuidora37
+101,❌ RUC duplicado: nan,PERSONAL,Javier López,4-8933-1063,nan,nan,javier.lópez63@empresa.com,+507 483-9595,javierlóp63
+102,❌ RUC duplicado: 37-2647-2038,COMMERCIAL,Alimentos del Norte S.A. - Contacto,nan,37-2647-2038,Alimentos del Norte S.A.,ventas38@alimentos.com,+507 398-5853,alimentos38
+103,❌ RUC duplicado: nan,PERSONAL,Andrés Hernández,5-1231-1064,nan,nan,andrés.hernández64@empresa.com,+507 925-9751,andrésher64
+104,❌ RUC duplicado: nan,PERSONAL,Sofía Castro,1-5786-1065,nan,nan,sofía.castro65@example.com,+507 914-3068,sofíacas65
+105,❌ RUC duplicado: nan,PERSONAL,Samuel García,5-8690-1066,nan,nan,samuel.garcía66@example.com,+507 690-8216,samuelgar66
+106,❌ RUC duplicado: nan,PERSONAL,Elena López,5-8827-1067,nan,nan,elena.lópez67@example.com,+507 316-2070,elenalóp67
+107,❌ RUC duplicado: nan,PERSONAL,Camila Vega,1-3485-1068,nan,nan,camila.vega68@example.com,+507 352-5978,camilaveg68
+108,❌ RUC duplicado: 32-2940-2039,COMMERCIAL,Comercial Panamá S.A. - Contacto,nan,32-2940-2039,Comercial Panamá S.A.,ventas39@comercial.com,+507 771-7818,comercial39
+109,❌ RUC duplicado: nan,PERSONAL,Tomás Mendoza,4-9561-1069,nan,nan,tomás.mendoza69@corp.test,+507 589-8381,tomásmen69
+110,❌ RUC duplicado: nan,PERSONAL,Valeria Fernández,7-6003-1070,nan,nan,valeria.fernández70@corp.test,+507 782-1986,valeriafer70
+111,❌ RUC duplicado: nan,PERSONAL,Tomás García,4-5335-1071,nan,nan,tomás.garcía71@empresa.com,+507 876-2330,tomásgar71
+112,❌ RUC duplicado: 31-3847-2040,COMMERCIAL,Servicios Globales Corp. - Contacto,nan,31-3847-2040,Servicios Globales Corp.,ventas40@servicios.com,+507 765-2229,servicios40
+113,❌ RUC duplicado: nan,PERSONAL,Jorge González,8-8699-1072,nan,nan,jorge.gonzález72@yappy-test.pa,+507 498-1534,jorgegon72
+114,❌ RUC duplicado: nan,PERSONAL,Andrés Fernández,8-2166-1073,nan,nan,andrés.fernández73,+507 903-4824,andrésfer73
+115,❌ RUC duplicado: nan,PERSONAL,Lucía Romero,7-2880-1074,nan,nan,lucía.romero74@empresa.com,+507 757-4683,nan
+116,❌ RUC duplicado: nan,PERSONAL,Sofía Castro,2-1977-1075,nan,nan,sofía.castro75@empresa.com,+507 369-6039,sofíacas75
+117,❌ RUC duplicado: nan,PERSONAL,Tomás Romero,8-3037-1076,nan,nan,tomás.romero76@negocio.com,+507 679-5982,tomásrom76
+118,❌ RUC duplicado: 35-9199-2041,COMMERCIAL,Grupo Andino S.A. - Contacto,nan,35-9199-2041,Grupo Andino S.A.,ventas41@grupo.com,+507 752-9090,grupo41
+119,❌ RUC duplicado: 11-1653-2042,COMMERCIAL,Soluciones del Istmo - Contacto,nan,11-1653-2042,Soluciones del Istmo,ventas42@soluciones.com,+507 642-6280,soluciones42
+120,❌ RUC duplicado: nan,PERSONAL,Tomás Castro,2-4750-1077,nan,nan,tomás.castro77@example.com,+507 890-1339,tomáscas77
+121,❌ RUC duplicado: nan,PERSONAL,Lucía Romero,3-8708-1078,nan,nan,lucía.romero78@example.com,+507 731-8245,lucíarom78
+122,❌ RUC duplicado: 24-8141-2043,COMMERCIAL,InnovaLogistics S.A. - Contacto,nan,24-8141-2043,InnovaLogistics S.A.,ventas43@innovalogistics.com,+507 850-9056,innovalogistics43
+123,❌ RUC duplicado: nan,PERSONAL,María Vega,7-6460-1079,nan,nan,maría.vega79@negocio.com,+507 528-2713,maríaveg79
+124,❌ RUC duplicado: nan,PERSONAL,Jorge Vásquez,8-5722-1080,nan,nan,jorge.vásquez80@yappy-test.pa,+507 878-7561,jorgevás80
+125,❌ RUC duplicado: nan,PERSONAL,Javier Rodríguez,2-6153-1081,nan,nan,javier.rodríguez81@yappy-test.pa,+507 458-6296,javierrod81
+126,❌ RUC duplicado: nan,PERSONAL,Carlos Morales,1-9889-1082,nan,nan,carlos.morales82@corp.test,+507 673-7770,carlosmor82
+127,❌ RUC duplicado: 25-9494-2044,COMMERCIAL,TecnoPlus S.A. - Contacto,nan,25-9494-2044,TecnoPlus S.A.,ventas44@tecnoplus.com,+507 570-9167,tecnoplus44
+128,❌ RUC duplicado: nan,PERSONAL,Valeria Rodríguez,5-9998-1083,nan,nan,valeria.rodríguez83@empresa.com,+507 334-5719,valeriarod83
+129,❌ RUC duplicado: nan,PERSONAL,Valeria Vega,1-4920-1084,nan,nan,valeria.vega84@example.com,+507 926-3594,valeriaveg84
+130,❌ RUC duplicado: nan,PERSONAL,Ricardo Navarro,7-2527-1085,nan,nan,ricardo.navarro85@example.com,+507 430-2858,ricardonav85
+131,❌ RUC duplicado: 16-3522-2045,COMMERCIAL,Soluciones del Istmo - Contacto,nan,16-3522-2045,Soluciones del Istmo,ventas45@soluciones.com,+507 710-5781,soluciones45
+132,❌ RUC duplicado: nan,PERSONAL,Marta Castro,8-8736-1086,nan,nan,marta.castro86@yappy-test.pa,+507 449-8483,martacas86
+133,❌ RUC duplicado: 19-7284-2046,COMMERCIAL,Energía & Más S.A. - Contacto,nan,19-7284-2046,Energía & Más S.A.,ventas46@energía.com,+507 395-9327,energía46
+134,❌ RUC duplicado: nan,PERSONAL,Sofía Pérez,7-6568-1087,nan,nan,sofía.pérez87,+507 719-5377,sofíapér87
+135,❌ RUC duplicado: 37-5891-2047,COMMERCIAL,TecnoPlus S.A. - Contacto,nan,37-5891-2047,TecnoPlus S.A.,ventas47@tecnoplus.com,+507 801-9022,nan
+136,❌ RUC duplicado: 58-9824-2048,COMMERCIAL,Servicios Globales Corp. - Contacto,nan,58-9824-2048,Servicios Globales Corp.,ventas48@servicios.com,+507 695-6654,servicios48
+137,❌ RUC duplicado: nan,PERSONAL,Elena Navarro,7-8460-1088,nan,nan,elena.navarro88@corp.test,+507 529-4090,elenanav88
+138,❌ RUC duplicado: nan,PERSONAL,Andrés Romero,4-7730-1089,nan,nan,andrés.romero89@yappy-test.pa,+507 244-6213,andrésrom89
+139,❌ RUC duplicado: nan,PERSONAL,Samuel Morales,3-9115-1090,nan,nan,samuel.morales90@yappy-test.pa,+507 237-3068,samuelmor90
+140,❌ RUC duplicado: nan,PERSONAL,Marta Romero,2-8213-1091,nan,nan,marta.romero91@negocio.com,+507 302-9617,martarom91
+141,❌ RUC duplicado: nan,PERSONAL,Valeria González,7-3529-1092,nan,nan,valeria.gonzález92@empresa.com,+507 276-8692,valeriagon92
+142,❌ RUC duplicado: 44-7512-2049,COMMERCIAL,InnovaLogistics S.A. - Contacto,nan,44-7512-2049,InnovaLogistics S.A.,ventas49@innovalogistics.com,+507 865-2315,innovalogistics49
+143,❌ RUC duplicado: nan,PERSONAL,Elena Navarro,6-8994-1093,nan,nan,elena.navarro93@yappy-test.pa,+507 754-1588,elenanav93
+144,❌ RUC duplicado: 9-4846-2050,COMMERCIAL,Alimentos del Norte S.A. - Contacto,nan,9-4846-2050,Alimentos del Norte S.A.,ventas50@alimentos.com,+507 846-5708,alimentos50
+145,❌ RUC duplicado: nan,PERSONAL,Andrés Pérez,2-2646-1094,nan,nan,andrés.pérez94@yappy-test.pa,+507 654-3725,andréspér94
+146,❌ RUC duplicado: nan,PERSONAL,Ricardo González,6-1919-1095,nan,nan,ricardo.gonzález95@example.com,+507 500-6873,ricardogon95
+147,❌ RUC duplicado: nan,PERSONAL,Diego Ramos,4-9702-1096,nan,nan,diego.ramos96@empresa.com,+507 621-3950,diegoram96
+148,❌ RUC duplicado: nan,PERSONAL,Jorge López,7-4945-1097,nan,nan,jorge.lópez97@example.com,+507 709-3344,jorgelóp97
+149,❌ RUC duplicado: nan,PERSONAL,Andrés Torres,8-5183-1098,nan,nan,andrés.torres98@negocio.com,+507 882-1153,andréstor98
+150,❌ RUC duplicado: nan,PERSONAL,Valeria Fernández,3-2210-1099,nan,nan,valeria.fernández99,+507 652-6661,valeriafer99
+151,❌ RUC duplicado: nan,PERSONAL,Diana Fernández,5-8484-1100,nan,nan,diana.fernández100@yappy-test.pa,+507 509-4263,dianafer100
